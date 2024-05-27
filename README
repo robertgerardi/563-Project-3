@@ -5,3 +5,9 @@ High Level Overview
 o The program consists of a Pipeline simulator that mimicks that Dynamic Instruction Scheduling of a real processor. Stages include fetch, decode, rename, register read, dispatch, issue, execute, writeback, and retire.
 o The pipeline fetches instructions from a trace, "decodes" them, renames them to registers, dispatches them into the issue queue, dynamically issues them out of order, simulates the execution of an instruction, performs a writeback to previous pipeline stages, and retires the instructions.
 o A report was compiled to review the IPC difference based on sizing constraints of different structures, such as the ROB and IQ.
+
+Code Descriptions
+
+sim_proc.h - header file that contains definitions for the various structures, such as the ROB and IQ, as well as the function definitions for the various pipeline stages.
+
+pipeline.cc - cpp file that contains a bulk of the pipeline codes, various stage implementations, and pipeline initilization.
