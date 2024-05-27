@@ -1,9 +1,7 @@
-1. Type "make" to build.  (Type "make clean" first if you already compiled and want to recompile from scratch.)
+North Carolina State University - ECE 563 - Microprocessor Architecture
 
-2. Run trace reader:
+High Level Overview
 
-   To run without throttling output:
-   ./sim 256 32 4 gcc_trace.txt
-
-   To run with throttling (via "less"):
-   ./sim 256 32 4 gcc_trace.txt | less
+o The program consists of a Pipeline simulator that mimicks that Dynamic Instruction Scheduling of a real processor. Stages include fetch, decode, rename, register read, dispatch, issue, execute, writeback, and retire.
+o The pipeline fetches instructions from a trace, "decodes" them, renames them to registers, dispatches them into the issue queue, dynamically issues them out of order, simulates the execution of an instruction, performs a writeback to previous pipeline stages, and retires the instructions.
+o A report was compiled to review the IPC difference based on sizing constraints of different structures, such as the ROB and IQ.
